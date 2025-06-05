@@ -1,0 +1,60 @@
+/* 検索バー */
+.search-section {
+  text-align: center;
+  margin: 5rem 0;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  width: 60%;
+  padding: 12px;
+  border: 1px solid var(--border-gray);
+  border-radius: 4px 0 0 4px;
+  font-size: 16px;
+  background-color: var(--base-white);
+}
+
+.search-button {
+  padding: 12px 20px;
+  background-color: var(--base-black);
+  color: var(--base-white);
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: var(--base-gray);
+}
+
+
+/* ポストリスト */
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+.post-item {
+  height: 15dvh;
+}
+.post-item a {
+  display: flex;
+  justify-content: space-between;
+}
+.post-thumbnail img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-title, .post-excerpt {
+  text-decoration: none;
+}
+.post-title:hover{
+  text-decoration: underline;
+}

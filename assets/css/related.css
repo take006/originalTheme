@@ -1,0 +1,102 @@
+.related-posts, .pickup-posts {
+  margin: 50px 0;
+}
+
+
+#related-article {
+  margin: 5rem 20%;
+}
+
+
+.section-title {
+  font-size: 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid #7b7b7b;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.post-item {
+  width: calc(25% - 15px); /* PC：4列 */
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+
+.post-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.post-item a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.thumb {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumb img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.thumb.no-image {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.text {
+  padding: 10px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* --- スマホ対応 (画面幅768px以下) --- */
+@media screen and (max-width: 768px) {
+  .post-item {
+      width: calc(50% - 10px); /* スマホ：2列 */
+  }
+
+  .thumb {
+      height: 120px; /* 少し高さを縮小 */
+  }
+
+  .section-title {
+      font-size: 1.3rem;
+  }
+}
+
+/* --- さらに小さいスマホ対応 (画面幅480px以下) --- */
+@media screen and (max-width: 480px) {
+  .post-item {
+      width: 100%; /* 1列表示 */
+  }
+
+  .thumb {
+      height: 100px;
+  }
+
+  .text {
+      font-size: 0.9rem;
+  }
+}
+

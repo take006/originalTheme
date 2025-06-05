@@ -1,0 +1,50 @@
+
+
+/* ページネーション全体のスタイル */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 100px auto;
+    flex-wrap: wrap;
+}
+
+/* 各リンクの基本スタイル */
+.pagination a,
+.pagination span {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background-color: #f3f4f6; /* 明るいグレー */
+    color: #1f2937; /* ダークグレー */
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+/* ホバー時 */
+.pagination a:hover {
+    background-color: #e5e7eb;
+    color: #111827;
+}
+
+/* 現在のページ */
+.pagination .current {
+    background-color: #2563eb; /* ブルー */
+    color: #ffffff;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+/* 前へ・次へを目立たせる */
+.pagination .prev,
+.pagination .next {
+    font-weight: 500;
+    background-color: #dbeafe; /* 薄い青 */
+}
+
+.pagination .prev:hover,
+.pagination .next:hover {
+    background-color: #bfdbfe;
+}

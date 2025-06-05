@@ -1,0 +1,176 @@
+
+#tag {
+  margin: 5rem auto;
+}
+
+/* カテゴリー一覧 */
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.category-list li a {
+  display: block;
+  padding: 8px 12px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+}
+
+.category-list li a:hover {
+  background-color: #ccc;
+}
+
+.category-scroll-wrapper {
+  position: relative;
+  width: 70%;
+  margin: 30px auto;
+  overflow: hidden;
+}
+
+.category-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 20px;
+  scroll-behavior: smooth;
+}
+
+.category-item {
+  display: inline-block;
+  flex-shrink: 0;
+  padding: 8px 16px;
+  background: #e0f7fa;
+  border-radius: 20px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #00796b;
+  font-size: 14px;
+}
+
+.category-item:hover {
+  background-color: #ffffff;
+}
+
+/* グラデーションエフェクト */
+.category-scroll-wrapper::before,
+.category-scroll-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.category-scroll-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, white, transparent);
+}
+
+.category-scroll-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, white, transparent);
+}
+
+.category-scroll::-webkit-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.category-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* タグ一覧 */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.tag-list li a {
+  display: block;
+  padding: 6px 10px;
+  background-color: #e0f7fa;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #00796b;
+}
+
+.tag-list li a:hover {
+  background-color: #b2ebf2;
+}
+
+.tag-scroll-wrapper {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.tag-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 20px;
+  scroll-behavior: smooth;
+}
+
+.tag-item {
+  flex-shrink: 0;
+  padding: 8px 16px;
+  background: #f0f0f0;
+  border-radius: 20px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.tag-item:hover {
+  background-color: #ddd;
+}
+
+/* フェードエフェクト（グラデーション） */
+.tag-scroll-wrapper::before,
+.tag-scroll-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.tag-scroll-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, white, transparent);
+}
+
+.tag-scroll-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, white, transparent);
+}
+.tag-scroll::-webkit-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.tag-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.text-wrapper div {
+  display: flex;
+  justify-content: space-between;
+}

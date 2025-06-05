@@ -1,0 +1,84 @@
+
+/* 記事一覧 */
+
+#article h2 {
+  margin-bottom: 100px;
+}
+
+#article {
+  margin: 0 10%;
+  margin-bottom: 100px;
+}
+
+
+.articles-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: 300px;
+  gap: 1rem;
+}
+
+.article-item {
+  border-radius: 5%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease;
+}
+.article-item:hover{
+  scale: 1.02;
+}
+.article-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5%;
+}
+.article-item a {
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s ease;
+}
+
+.article-item a:hover{
+  opacity: .7;
+}
+
+.article-item a h3:hover{
+  text-decoration: underline;
+}
+.text-wrapper {
+  padding: 1.5rem 1rem;
+}
+
+
+#todo {
+    margin: 0 20%;
+}
+
+.post-date {
+  font-size: .8rem;
+  color: var(--base-gray);
+}
+
+.text-wrapper * {
+  margin-bottom: 1rem;
+}
+
+
+.thumb {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.thumb img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.thumb.no-image {
+  font-size: 0.9rem;
+  color: #666;
+}

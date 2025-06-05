@@ -1,0 +1,116 @@
+/* 全体レイアウト */
+.archive-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
+
+/* 検索バー */
+.search-section {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  width: 60%;
+  padding: 12px;
+  border: 1px solid var(--border-gray);
+  border-radius: 4px 0 0 4px;
+  font-size: 16px;
+  background-color: var(--base-white);
+}
+
+.search-button {
+  padding: 12px 20px;
+  background-color: var(--base-black);
+  color: var(--base-white);
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: var(--base-gray);
+}
+
+/* 記事一覧 */
+.archive-title {
+  text-align: center;
+  font-size: 28px;
+  color: var(--base-black);
+  margin-bottom: 100px;
+}
+
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.post-item {
+  background-color: var(--base-white);
+  border: 1px solid var(--border-gray);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+
+.post-item a {
+  text-decoration: none;
+  color: var(--base-black);
+}
+
+.post-item:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: .7;
+}
+
+
+.post-thumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.post-title {
+  font-size: 20px;
+  margin: 15px;
+  color: var(--base-black);
+}
+
+.post-title:hover {
+  text-decoration: underline;
+}
+.post-excerpt {
+  font-size: 14px;
+  margin: 0 15px 15px;
+  color: var(--base-gray);
+}
+
+/* ページネーション */
+.pagination {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.pagination .page-numbers {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 10px 14px;
+  color: var(--base-black);
+  border: 1px solid var(--border-gray);
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.pagination .current {
+  background-color: var(--base-black);
+  color: var(--base-white);
+}

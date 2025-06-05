@@ -1,0 +1,22 @@
+ul {
+  padding-left: 1.5rem;
+}
+
+.updated-date {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.container {
+  margin: 100px 100px;
+}
+.container section {
+  margin: 2rem 0;
+}
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+}

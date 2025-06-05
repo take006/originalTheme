@@ -1,0 +1,43 @@
+.footer {
+  background-color: var(--base-white);
+  border-top: 1px solid var(--border-gray);
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--base-gray);
+}
+
+.footer a {
+  color: var(--base-gray);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--base-black);
+  text-decoration: underline;
+}
+
+.copy-right-wrapper p {
+  text-align: center;
+  color: var(--font-light-gray);
+}
+
+/* 共通メニュー用スタイル */
+.header-menu,
+.footer-menu {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.header-menu li,
+.footer-menu li {
+  display: inline-block;
+}
+
+.copy-right {
+  color: var(--font-light-gray);
+}

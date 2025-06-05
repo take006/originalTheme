@@ -1,0 +1,31 @@
+header {
+  background-color: var(--base-white);
+  border-bottom: 1px solid var(--border-gray);
+  height: 60px;
+  width: 100%;
+  color: var(--base-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.header a {
+  margin: 0 15px;
+  font-size: 16px;
+  text-decoration: none;
+  color: var(--font-light-gray);
+}
+
+
+.main-menu .current_page_item > a {
+  color: blue;
+  padding: 1rem;
+  border-bottom: 2px solid blue;
+}
