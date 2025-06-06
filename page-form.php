@@ -112,11 +112,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'
           </a>に同意する（任意）
         </label>
       </p>
-
       <?php if (isset($errors['privacy'])) : ?>
         <p class="error" style="color:red;"><?php echo esc_html($errors['privacy']); ?></p>
       <?php endif; ?>
-
       <button type="submit">確認画面へ</button>
     </div>
   </form>
