@@ -11,6 +11,7 @@ get_header();
       </form>
     </section>
     <section id ="todo">
+      <h2>TODOリスト</h2>
       <ul>
         <li><input type="checkbox">よく検索されるタグをこの辺にに表示する</li>
         <li><input type="checkbox">ピックアップ記事を１つ表示する</li>
