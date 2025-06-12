@@ -93,6 +93,11 @@
   color: var(--base-gray);
 }
 
+.thumb.no-image {
+  width: 100%;
+  height: 10rem;
+}
+
 /* ページネーション */
 .pagination {
   text-align: center;
@@ -114,3 +119,4 @@
   background-color: var(--base-black);
   color: var(--base-white);
 }
+

@@ -44,5 +44,63 @@ get_header();
         </div>
       </div>
     </section>
+    <section id="article"> 
+      <h2>WordPress</h2>
+      <div class="articles-wrapper">
+
+        <?php
+        // カテゴリー「WordPress」の記事を最大6件取得
+        $args = array(
+          'category_name' => 'wordpress', // カテゴリースラッグ
+          'posts_per_page' => 6
+        );
+        $the_query = new WP_Query($args);
+
+        if ($the_query->have_posts()) :
+          while ($the_query->have_posts()) : $the_query->the_post();
+        ?>
+            <article class="article-item">
+              <a href="<?php the_permalink(); ?>">
+                <?php if ( has_post_thumbnail() ) : ?>
+                  <div class="thumb"><?php the_post_thumbnail('thumbnail'); ?></div>
+                <?php else: ?>
+                  <div class="thumb no-image">No Image</div>
+                <?php endif; ?>
+
+                <div class="text-wrapper">
+                  <h3><?php the_title(); ?></h3>
+                  <div>
+                    <p class="post-date"><?php the_time(get_option('date_format')); ?></p>
+                    <?php
+                    $categories = get_the_category();
+                    if ( !empty($categories) ) {
+                      echo '<span class="category-item">' . esc_html($categories[0]->name) . '</span>';
+                    }
+                    ?>
+                  </div>
+                </div>
+              </a>
+            </article>
+        <?php
+          endwhile;
+        endif;
+        wp_reset_postdata();
+        ?>
+      </div>
+
+      <?php
+      // 「もっと見る」ボタン表示条件（6件以上あるかチェック）
+      $check_args = array(
+        'category_name' => 'wordpress',
+        'posts_per_page' => -1
+      );
+      $check_query = new WP_Query($check_args);
+      if ( $check_query->found_posts > 6 ) :
+      ?>
+        <div class="more-button-wrapper">
+          <a href="<?php echo esc_url( get_category_link( get_category_by_slug('wordpress')->term_id ) ); ?>" class="more-button">もっと見る</a>
+        </div>
+      <?php endif; wp_reset_postdata(); ?>
+    </section>
   </main>
   <?php get_footer(); ?>

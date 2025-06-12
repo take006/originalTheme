@@ -31,6 +31,10 @@
   margin: 30px auto;
   overflow: hidden;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9f2f0c6 (記事一覧のレイアウトを調整)
 
 .category-scroll {
   display: flex;
@@ -173,4 +177,15 @@
 .text-wrapper div {
   display: flex;
   justify-content: space-between;
+}
+
+
+/* レスポンシブ対応 */
+@media (max-width: 480px) {
+  .category-scroll-wrapper {
+    width: 90%;
+  }
+  .tag-scroll-wrapper {
+    width: 90%;
+  }
 }
