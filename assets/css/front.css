@@ -79,4 +79,6 @@
 .thumb.no-image {
   font-size: 0.9rem;
   color: #666;
+  width: 100%;
+  height: 10rem;
 }
