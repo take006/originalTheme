@@ -2,7 +2,6 @@
   background-color: var(--base-white);
   border-top: 1px solid var(--border-gray);
   padding: 20px;
-  text-align: center;
   font-size: 14px;
   color: var(--base-gray);
 }
@@ -15,6 +14,11 @@
 .footer a:hover {
   color: var(--base-black);
   text-decoration: underline;
+}
+.copy-right-wrapper {
+  margin-top: 10rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .copy-right-wrapper p {
