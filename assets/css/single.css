@@ -5,6 +5,9 @@ main {
   display: flex;
   justify-content: center;
 }
+.article-date p {
+  color: var(--base-gray);
+}
 .article-date p:last-child {
   margin-left: 1rem;
 }
@@ -108,6 +111,7 @@ article h1 {
 .breadcrumb {
   font-size: 0.9em;
   margin: 20px 0;
+  margin-left: 1rem;
 }
 
 .breadcrumb a {
@@ -128,4 +132,8 @@ article h1 {
 }
 .vlp-link-summary {
   font-size: 1rem;
+}
+
+.wp-block-table {
+  margin-bottom: 2rem;
 }
