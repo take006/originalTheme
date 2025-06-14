@@ -1,7 +1,6 @@
 .footer {
   background-color: var(--base-white);
   border-top: 1px solid var(--border-gray);
-  padding: 20px;
   font-size: 14px;
   color: var(--base-gray);
 }
@@ -15,33 +14,36 @@
   color: var(--base-black);
   text-decoration: underline;
 }
+
 .copy-right-wrapper {
-  margin-top: 10rem;
   margin-bottom: 1rem;
   text-align: center;
 }
 
 .copy-right-wrapper p {
+  font-size: 12px;
   text-align: center;
   color: var(--font-light-gray);
 }
 
-/* 共通メニュー用スタイル */
-.header-menu,
+
+
 .footer-menu {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  padding: 5rem;
 }
 
-.header-menu li,
 .footer-menu li {
   display: inline-block;
 }
 
 .copy-right {
   color: var(--font-light-gray);
+}
+.support-wrapper a {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.footer-title {
+  margin-bottom: 2rem;
 }
