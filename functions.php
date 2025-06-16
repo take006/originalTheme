@@ -43,6 +43,10 @@ function enqueue_custom_stylesheets() {
     ) {
         wp_enqueue_style('privacy', get_template_directory_uri() . '/assets/css/privacy.css');
     }
+    elseif (is_tax('series')) {
+    wp_enqueue_style('series', get_template_directory_uri() . '/assets/css/series.css');
+}
+
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_stylesheets');
 
@@ -193,4 +197,23 @@ function mytheme_enqueue_scripts() {
     wp_enqueue_script('quiz-script', get_template_directory_uri() . '/assets/js/quiz.js', array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'mytheme_enqueue_scripts');
+
+
+
+// 「連載シリーズ」タクソノミーを追加
+function register_series_taxonomy() {
+    register_taxonomy(
+        'series', // タクソノミーのスラッグ
+        'post',   // 投稿タイプ（'post' を対象に）
+        array(
+            'label' => '連載シリーズ',
+            'hierarchical' => true,
+            'public' => true,
+            'show_ui' => true,
+            'rewrite' => array('slug' => 'series')
+        )
+    );
+}
+add_action('init', 'register_series_taxonomy');
+
 ?>

@@ -28,6 +28,8 @@
           「<?php single_cat_title(); ?>」カテゴリーの記事一覧
         <?php elseif (is_tag()) : ?>
           「<?php single_tag_title(); ?>」タグの記事一覧
+        <?php elseif (is_tax('series')) : ?>
+          「<?php single_term_title(); ?>」シリーズの記事一覧
         <?php else : ?>
           記事一覧
         <?php endif; ?>
@@ -53,11 +55,11 @@
         <p>記事が見つかりませんでした。</p>
       <?php endif; ?>
     </section>
+
     <!-- ページネーション -->
     <?php get_template_part('template-parts/pagination'); ?>
   </main>
 
   <?php get_footer(); ?>
-
 </body>
 </html>

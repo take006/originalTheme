@@ -1,0 +1,15 @@
+#series {
+  margin: 0 10%;
+  margin-bottom: 100px;
+}
+
+
+#series a {
+  color: var(--base-gray);
+  text-decoration: none;
+}
+
+#series a:hover {
+  color: var(--base-black);
+  text-decoration: underline;
+}
