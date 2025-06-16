@@ -23,6 +23,18 @@
           </div>
         </div>
         <div class="article-content">
+        <!-- シリーズ表示 -->
+        <?php
+        $series_terms = get_the_terms(get_the_ID(), 'series');
+        if (!empty($series_terms) && !is_wp_error($series_terms)) {
+            echo '<div class="post-series">';
+            echo 'シリーズ：';
+            foreach ($series_terms as $term) {
+                echo '<a href="' . get_term_link($term) . '">' . esc_html($term->name) . '</a> ';
+            }
+            echo '</div>';
+        }
+        ?>
         <div class="post-category">
         <?php
           $categories = get_the_category();

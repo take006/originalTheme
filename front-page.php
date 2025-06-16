@@ -105,6 +105,27 @@ get_header();
         ?>
       </div>
     </section>
+    <section id="series">
+      <?php
+      $series_terms = get_terms(array(
+          'taxonomy' => 'series',
+          'hide_empty' => false, // 投稿がないタームも表示する場合は true を false に
+      ));
 
+      if (!empty($series_terms) && !is_wp_error($series_terms)) : ?>
+          <section class="series-list">
+              <h2>連載シリーズ一覧</h2>
+              <ul>
+                  <?php foreach ($series_terms as $term) : ?>
+                      <li>
+                          <a href="<?php echo esc_url(get_term_link($term)); ?>">
+                              <?php echo esc_html($term->name); ?>（<?php echo $term->count; ?>件）
+                          </a>
+                      </li>
+                  <?php endforeach; ?>
+              </ul>
+          </section>
+      <?php endif; ?>
+    </section>
   </main>
   <?php get_footer(); ?>
