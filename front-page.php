@@ -4,21 +4,21 @@ get_header();
 ?>
   <main>
     <h1 style="text-align: center;">front-page.php</h1>
+    <section id ="todo">
+      <h2>TODO</h2>
+      <ul>
+        <li><input type="checkbox">pick-up記事を１つ表示する</li>
+        <li><input type="checkbox">コンタクトフォームのエラー改善</li>
+        <li><input type="checkbox">デザイン調整：プライバシーポリシー</li>
+        <li><input type="checkbox">Service：サービス概要</li>
+        <li><input type="checkbox">Developers：開発言語などを記載</li>
+      </ul>
+    </section>
     <section class="search-section">
       <form method="get" action="<?php echo home_url('/'); ?>">
         <input type="text" name="s" placeholder="記事を検索..." class="search-input">
         <button type="submit" class="search-button">検索</button>
       </form>
-    </section>
-    <section id ="todo">
-      <h2>TODO</h2>
-      <ul>
-        <li><input type="checkbox">よく検索されるタグをこの辺にに表示する</li>
-        <li><input type="checkbox">ピックアップ記事を１つ表示する</li>
-        <li><input type="checkbox">コンタクトフォームの実装</li>
-        <li><input type="checkbox">プライバシーポリシーの実装</li>
-        <li><input type="checkbox">開発情報の記載（information）</li>
-      </ul>
     </section>
     <section id="tag">
       <div class="category-scroll-wrapper">

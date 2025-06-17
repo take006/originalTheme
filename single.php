@@ -68,9 +68,6 @@
           </div>
           <?php endif; ?>
           <!-- 本文 -->
-          <section id="article-summary">
-            <h3>AI要約</h3>
-          </section>
           <section id="article-index">
             <h3>目次</h3>
           </section>

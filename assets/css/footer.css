@@ -30,12 +30,15 @@
 
 .footer-menu {
   padding: 5rem;
+  display: flex;
 }
 
 .footer-menu li {
   display: inline-block;
 }
-
+.footer-item {
+  margin-right: 4rem;
+}
 .copy-right {
   color: var(--font-light-gray);
 }
