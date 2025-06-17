@@ -45,7 +45,7 @@ get_header();
       </div>
     </section>
     <section id="article"> 
-      <h2>WordPress</h2>
+      <h2 class="underline">WordPress</h2>
       <div class="articles-wrapper">
 
         <?php

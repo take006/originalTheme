@@ -30,7 +30,7 @@
 .article-item img {
   width: 100%;
   height: auto;
-  border-radius: 5%;
+  border-radius: 5% 5% 0 0;
 }
 .article-item a {
   text-decoration: none;
