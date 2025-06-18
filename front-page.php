@@ -20,7 +20,7 @@ get_header();
         <button type="submit" class="search-button">検索</button>
       </form>
     </section>
-    <section id="tag">
+    <section id="category">
       <div class="category-scroll-wrapper">
         <div class="category-scroll">
           <?php
@@ -32,6 +32,9 @@ get_header();
           ?>
         </div>
       </div>
+      <button class="type-more"><a href="">すべてのカテゴリー</a></button>
+    </section>
+    <section id="tag">
       <div class="tag-scroll-wrapper">
         <div class="tag-scroll">
           <?php
@@ -43,6 +46,7 @@ get_header();
           ?>
         </div>
       </div>
+      <button class="type-more"><a href="">すべてのタグ</a></button>
     </section>
     <?php 
     $paged = get_query_var('paged') ? get_query_var('paged') : 1;
