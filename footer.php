@@ -17,7 +17,7 @@
         <div class="footer-item">
           <p class="footer-title">Support</p>
           <div class="support-wrapper">
-            <a href="#">利用規約</a>
+            <a href="<?php echo home_url('/agreement'); ?>">利用規約</a>
             <a href="<?php echo home_url('/privacy-policy'); ?>">プライバシーポリシー</a>
           </div>
         </div>

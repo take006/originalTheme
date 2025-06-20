@@ -11,41 +11,46 @@ get_header();
         <button type="submit" class="search-button">検索</button>
       </form>
     </section>
-    <!-- <section id ="todo">
-      <ul>
-        <li>✓よく検索されるタグをこの辺にに表示する</li>
-        <li>ピックアップ記事を１つ表示する</li>
-        <li>コンタクトフォームの実装</li>
-        <li>プライバシーポリシーの実装</li>
-        <li>開発情報の記載（information）</li>
-      </ul>
-    </section> -->
-    <section id="tag">
-      <div class="category-scroll-wrapper">
-        <div class="category-scroll">
-          <?php
-            $categories = get_categories();
-            foreach ( $categories as $category ) {
-              $cat_link = get_category_link( $category->term_id );
-              echo '<a href="' . esc_url( $cat_link ) . '" class="category-item">' . esc_html( $category->name ) . '</a>';
-            }
-          ?>
-        </div>
+
+    <section id="category">
+      <?php
+      function custom_category_tree($parent_id = 0) {
+          $args = array(
+              'parent'     => $parent_id,
+              'hide_empty' => false,
+              'orderby'    => 'name',
+              'order'      => 'ASC',
+          );
+
+          $categories = get_categories($args);
+
+          if ($categories) {
+              echo '<ul>';
+              foreach ($categories as $category) {
+                  $category_link = esc_url(get_category_link($category->term_id));
+                  $category_name = esc_html($category->name);
+
+                  echo '<li><a href="' . $category_link . '">' . $category_name . '</a>';
+
+                  // 子カテゴリーがあれば再帰的に表示
+                  custom_category_tree($category->term_id);
+
+                  echo '</li>';
+              }
+              echo '</ul>';
+          }
+      }
+      ?>
+
+      <!-- 呼び出し部分 -->
+      <div class="category-tree">
+          <?php custom_category_tree(); ?>
       </div>
-      <div class="tag-scroll-wrapper">
-        <div class="tag-scroll">
-          <?php
-            $tags = get_tags();
-            foreach ( $tags as $tag ) {
-              $tag_link = get_tag_link( $tag->term_id );
-              echo '<a href="' . esc_url( $tag_link ) . '" class="tag-item">' . esc_html( $tag->name ) . '</a>';
-            }
-          ?>
-        </div>
-      </div>
+
     </section>
+
     <section id="article"> 
-      <h2 class="underline">WordPress</h2>
+      <h2>WordPress</h2>
       <div class="articles-wrapper">
 
         <?php

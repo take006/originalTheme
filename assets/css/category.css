@@ -1,37 +1,37 @@
-#tag {
+#category {
   margin: 5rem auto;
 }
 
-.tag-list {
+
+.category-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   list-style: none;
   padding: 0;
-  margin-top: 10px;
 }
 
-.tag-list li a {
+.category-list li a {
   display: block;
-  padding: 6px 10px;
-  background-color: #e0f7fa;
+  padding: 8px 12px;
+  background-color: #f0f0f0;
   border-radius: 5px;
   text-decoration: none;
-  color: #00796b;
+  color: #333;
 }
 
-.tag-list li a:hover {
-  background-color: #b2ebf2;
+.category-list li a:hover {
+  background-color: #ccc;
 }
 
-.tag-scroll-wrapper {
+.category-scroll-wrapper {
   position: relative;
   width: 70%;
-  margin: 0 auto;
+  margin: 30px auto;
   overflow: hidden;
 }
 
-.tag-scroll {
+.category-scroll {
   display: flex;
   gap: 10px;
   overflow-x: auto;
@@ -39,24 +39,25 @@
   scroll-behavior: smooth;
 }
 
-.tag-item {
+.category-item {
+  display: inline-block;
   flex-shrink: 0;
   padding: 8px 16px;
-  background: #f0f0f0;
+  background: #e0f7fa;
   border-radius: 20px;
   white-space: nowrap;
   text-decoration: none;
-  color: #333;
+  color: #00796b;
   font-size: 14px;
 }
 
-.tag-item:hover {
-  background-color: #ddd;
+.category-item:hover {
+  background-color: #ffffff;
 }
 
-/* フェードエフェクト（グラデーション） */
-.tag-scroll-wrapper::before,
-.tag-scroll-wrapper::after {
+/* グラデーションエフェクト */
+.category-scroll-wrapper::before,
+.category-scroll-wrapper::after {
   content: "";
   position: absolute;
   top: 0;
@@ -66,34 +67,29 @@
   pointer-events: none;
 }
 
-.tag-scroll-wrapper::before {
+.category-scroll-wrapper::before {
   left: 0;
   background: linear-gradient(to right, white, transparent);
 }
 
-.tag-scroll-wrapper::after {
+.category-scroll-wrapper::after {
   right: 0;
   background: linear-gradient(to left, white, transparent);
 }
-.tag-scroll::-webkit-scrollbar {
+
+.category-scroll::-webkit-scrollbar {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
 
-.tag-scroll::-webkit-scrollbar {
+.category-scroll::-webkit-scrollbar {
   display: none;
-}
-
-.text-wrapper div {
-  display: flex;
-  justify-content: space-between;
 }
 
 
 /* レスポンシブ対応 */
 @media (max-width: 480px) {
-
-  .tag-scroll-wrapper {
+  .category-scroll-wrapper {
     width: 90%;
   }
 }

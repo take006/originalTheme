@@ -15,6 +15,12 @@ function enqueue_custom_stylesheets() {
         wp_enqueue_style('search', get_template_directory_uri() . '/assets/css/search.css');
         wp_enqueue_style('pagenation', get_template_directory_uri() . '/assets/css/pagenation.css');
         wp_enqueue_style('tag', get_template_directory_uri() . '/assets/css/tag.css');
+        wp_enqueue_style('category', get_template_directory_uri() . '/assets/css/category.css');
+        wp_enqueue_style('archive', get_template_directory_uri() . '/assets/css/archive.css');
+    }
+    if (is_archive()) {
+        wp_enqueue_style('front', get_template_directory_uri() . '/assets/css/front.css');
+        wp_enqueue_style('pagenation', get_template_directory_uri() . '/assets/css/pagenation.css');
         wp_enqueue_style('archive', get_template_directory_uri() . '/assets/css/archive.css');
     }
 
@@ -39,6 +45,14 @@ function enqueue_custom_stylesheets() {
         wp_enqueue_style('contact', get_template_directory_uri() . '/assets/css/contact.css');
     }
     elseif (
+        is_page_template('page-agreement.php') ||
+        is_page_template('page-company.php') ||
+        is_page_template('page-developer.php') ||
+        is_page_template('page-service.php')
+    ) {
+        wp_enqueue_style('page', get_template_directory_uri() . '/assets/css/page.css');
+    }
+    elseif (
         is_page_template('page-privacy-policy.php') 
     ) {
         wp_enqueue_style('privacy', get_template_directory_uri() . '/assets/css/privacy.css');
@@ -54,6 +68,7 @@ add_action('wp_enqueue_scripts', 'enqueue_custom_stylesheets');
 ?>
 
 <?php 
+
 // サムネイル画像サポート
 function setup_theme() {
     add_theme_support('post-thumbnails');
@@ -216,4 +231,31 @@ function register_series_taxonomy() {
 }
 add_action('init', 'register_series_taxonomy');
 
+// 親カテゴリーのみを表示するためのクエリ修正
+// カテゴリーページで親カテゴリーのみを表示する
+function strict_category_only( $query ) {
+    if ( is_admin() || ! $query->is_main_query() || ! is_category() ) {
+        return;
+    }
+
+    $term = get_queried_object();
+    if ( ! ( $term && isset( $term->term_id ) ) ) {
+        return;
+    }
+
+    // デフォルトの cat クエリをクリア
+    $query->set( 'cat', '' );
+    $query->set( 'category_name', '' );
+
+    // このカテゴリだけを指定（子は含めない）
+    $query->set( 'tax_query', array(
+        array(
+            'taxonomy'         => 'category',
+            'field'            => 'term_id',
+            'terms'            => array( $term->term_id ),
+            'include_children' => false,
+        ),
+    ) );
+}
+add_action( 'pre_get_posts', 'strict_category_only' );
 ?>
