@@ -59,6 +59,7 @@
   border-radius: 8px;
   overflow: hidden;
   transition: box-shadow 0.3s;
+  max-width: 280px;
 }
 
 .post-item a {
@@ -74,8 +75,8 @@
 
 .post-thumbnail img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 10rem;
+  object-fit: cover
 }
 
 .post-title {

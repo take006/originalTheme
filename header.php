@@ -9,6 +9,6 @@
 <body>
   <header class="header">
     <a href="<?php echo home_url(); ?>">Top</a>
-    <a href="<?php echo home_url('/blog'); ?>">Blog</a>
+    <a href="<?php echo home_url('/blog'); ?>">Blog(category)</a>
     <a href="<?php echo home_url('/form'); ?>">contact form</a>
   </header>
