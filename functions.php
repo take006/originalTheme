@@ -48,6 +48,7 @@ function enqueue_custom_stylesheets() {
         is_page_template('page-agreement.php') ||
         is_page_template('page-company.php') ||
         is_page_template('page-developer.php') ||
+        is_page_template('page-privacy-policy.php') ||
         is_page_template('page-service.php')
     ) {
         wp_enqueue_style('page', get_template_directory_uri() . '/assets/css/page.css');

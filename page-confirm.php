@@ -35,7 +35,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'
 ?>
 
 <main>
-  <h1>confirm.php</h1>
+  <h1 style="color:gray;">confirm.php</h1>
   <section id="contact-confirm">
     <h2>確認画面</h2>
     <form method="post" action="">

@@ -3,7 +3,7 @@
 get_header(); 
 ?>
 <main>
-  <h1>Library.php</h1>
+  <h1 style="color:gray;">Library.php</h1>
   <div class="article-wrapper">
     <article class="article-item">HTML</article>
     <article class="article-item">CSS</article>

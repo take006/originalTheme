@@ -5,7 +5,7 @@ Template Name: serviceページ
 ?>
 <?php get_header(); ?>
   <main>
-    <h1>service.php</h1>
+    <h1 style="color:gray;">service.php</h1>
     <section id="content">
       <h2>サービス紹介</h2>
       <h3>このサイトについて</h3>

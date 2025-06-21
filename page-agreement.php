@@ -5,7 +5,7 @@ Template Name: agreementページ
 ?>
 <?php get_header(); ?>
   <main>
-    <h1>page-agreement.php</h1>
+    <h1 style="color:gray;">page-agreement.php</h1>
     <h2>利用規約</h2>
     <section id="content">
       <ol>

@@ -47,9 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'
 ?>
 
 <main>
-  <h1>お問い合わせフォーム</h1>
-
-
+  <h1 style="color:gray;">form.php</h1>
+  <h2>お問い合わせフォーム</h2>
   <!-- お問い合わせフォーム -->
   <form method="post" action="<?php echo esc_url(get_permalink()); ?>">
     <?php wp_nonce_field('contact_form', 'contact_form_nonce'); ?>

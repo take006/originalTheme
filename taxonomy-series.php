@@ -2,7 +2,7 @@
 
 <main>
   <section id="series">
-    <h1><?php single_term_title(); ?>のシリーズ記事一覧</h1>
+    <h1 style="color:gray;"><?php single_term_title(); ?>のシリーズ記事一覧</h1>
     <?php if (have_posts()) : ?>
         <ul>
             <?php while (have_posts()) : the_post(); ?>

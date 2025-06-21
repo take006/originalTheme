@@ -3,7 +3,7 @@
 get_header(); 
 ?>
   <main>
-    <h1>home.php(blog)</h1>
+    <h1 style="color:gray;">home.php(blog)</h1>
     <p>タグを選択したら動的に読み込みがかかって一意するタグ、カテゴリーの記事がいちらんで表示されるようにする</p>
     <section class="search-section">
       <form method="get" action="<?php echo home_url('/'); ?>">

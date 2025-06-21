@@ -14,7 +14,7 @@
   <?php get_header(); ?>
 
   <main>
-    <h1>page.php</h1>
+    <h1 style="color:gray;">page.php</h1>
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
       <article>
         <!-- アイキャッチ画像 -->
