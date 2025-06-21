@@ -41,6 +41,7 @@ ol {
 .item{
   margin-bottom: 20px;
 }
+
 ul li::marker{
   color: var(--base-gray);
 }
@@ -50,4 +51,8 @@ p {
 .announcement {
   color: red;
   font-weight: bold;
+}
+
+.updated-date {
+  text-align: center;
 }

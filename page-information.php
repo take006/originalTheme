@@ -3,7 +3,7 @@
 get_header(); 
 ?>
 <main>
-  <h1>Information.php</h1>
+  <h1 style="color:gray;">Information.php</h1>
   <table>
     <tr>
       <th>スキル</th>

@@ -11,6 +11,9 @@
       ?>
       <span><?php the_title(); ?></span>
     </nav>
+
+    <h1 style="color:gray;">single.php</h1>
+
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
       <article>
         <div class="article-title">

@@ -3,10 +3,10 @@
 get_header(); 
 ?>
 <main>
-  <h1>privacy-policy.php</h1>
-  <div class="container">
+  <h1 style="color:gray;">privacy-policy.php</h1>
+  <section id="content">
     <h2>プライバシーポリシー</h2>
-
+    <p class="updated-date">制定日：2025年6月3日</p>
     <section>
       <h3>1. 個人情報の利用目的</h3>
       <p>
@@ -49,8 +49,6 @@ get_header();
         最新のプライバシーポリシーは本ページにて常に開示されます。
       </p>
     </section>
-
-    <p class="updated-date">制定日：2025年6月3日</p>
-  </div>
+  </section>
 </main>
 <?php get_footer(); ?>

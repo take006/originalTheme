@@ -13,7 +13,7 @@
 </head>
 <body>
   <?php get_header(); ?>
-
+  <h1 style="color:gray;">search.php</h1>
   <main class="archive-container">
     <section class="search-section">
       <form method="get" action="<?php echo home_url('/'); ?>">

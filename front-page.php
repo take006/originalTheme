@@ -3,15 +3,12 @@
 get_header(); 
 ?>
   <main>
-    <h1 style="text-align: center;">front-page.php</h1>
+    <h1 style="color:gray;">front-page.php</h1>
     <section id ="todo">
       <h2>TODO</h2>
       <ul>
         <li><input type="checkbox">pick-up記事を１つ表示する</li>
         <li><input type="checkbox">コンタクトフォームのエラー改善</li>
-        <li><input type="checkbox">デザイン調整：プライバシーポリシー</li>
-        <li><input type="checkbox">Service：サービス概要</li>
-        <li><input type="checkbox">Developers：開発言語などを記載</li>
       </ul>
     </section>
     <section class="search-section">

@@ -5,7 +5,7 @@ Template Name: developerページ
 ?>
   <?php get_header(); ?>
   <main>
-    <h1>developer.php</h1>
+    <h1 style="color:gray;">developer.php</h1>
     <p class="announcement">テーブル形式で実装する</p>
     <section id="content">
     <h2>技術スタック</h2>
