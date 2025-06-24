@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-<html lang="">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Search.php</title>
-  <link rel="stylesheet" href="../../wp-content/themes/originalTheme/assets/css/reset.css">
-  <link rel="stylesheet" href="../../wp-content/themes/originalTheme/assets/css/color.css">
-  <link rel="stylesheet" href="../../wp-content/themes/originalTheme/assets/css/header.css">
-  <link rel="stylesheet" href="../../wp-content/themes/originalTheme/assets/css/footer.css">
-  <link rel="stylesheet" href="../../wp-content/themes/originalTheme/assets/css/archive.css">
-  <link rel="stylesheet" href="../../wp-content/themes/originalTheme/assets/css/search.css">
-</head>
-<body>
   <?php get_header(); ?>
   <h1 style="color:gray;">search.php</h1>
   <main class="archive-container">
@@ -60,8 +46,4 @@
       <?php endif; ?>
     </section>
   </main>
-
   <?php get_footer(); ?>
-
-</body>
-</html>
