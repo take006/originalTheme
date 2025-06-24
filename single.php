@@ -71,9 +71,11 @@
           </div>
           <?php endif; ?>
           <!-- 本文 -->
+           
           <section id="article-index">
             <h3>目次</h3>
           </section>
+
           <div class="entry-content">
             <?php the_content(); ?>
           </div>

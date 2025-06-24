@@ -70,9 +70,8 @@ function enqueue_custom_stylesheets() {
 
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_stylesheets');
-
-
 ?>
+
 
 <?php 
 
@@ -265,4 +264,6 @@ function strict_category_only( $query ) {
     ) );
 }
 add_action( 'pre_get_posts', 'strict_category_only' );
+
+
 ?>
