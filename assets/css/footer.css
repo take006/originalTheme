@@ -50,3 +50,16 @@
 .footer-title {
   margin-bottom: 2rem;
 }
+
+@media (max-width: 768px) {
+  .footer-menu {
+    padding: 1rem;
+    display: block;
+  }
+  .footer-title {
+  margin-bottom: 1rem;
+  }
+  .footer-item {
+    margin: 0 0 2rem 0;
+  }
+}

@@ -27,7 +27,7 @@
 .category-scroll-wrapper {
   position: relative;
   width: 70%;
-  margin: 30px auto;
+  margin: 0 auto;
   overflow: hidden;
 }
 
@@ -85,7 +85,6 @@
 .category-scroll::-webkit-scrollbar {
   display: none;
 }
-
 
 /* レスポンシブ対応 */
 @media (max-width: 480px) {
