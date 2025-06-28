@@ -102,9 +102,7 @@ get_header();
       $check_query = new WP_Query($check_args);
       if ( $check_query->found_posts > 6 ) :
       ?>
-        <div class="more-button-wrapper">
-          <a href="<?php echo esc_url( get_category_link( get_category_by_slug('wordpress')->term_id ) ); ?>" class="more-button">もっと見る</a>
-        </div>
+        <button class="type-more"><a href="<?php echo esc_url( get_category_link( get_category_by_slug('wordpress')->term_id ) ); ?>" class="more-button">もっと見る</a></button>
       <?php endif; wp_reset_postdata(); ?>
     </section>
   </main>

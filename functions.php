@@ -17,6 +17,7 @@ function enqueue_custom_stylesheets() {
         wp_enqueue_style('tag', get_template_directory_uri() . '/assets/css/tag.css');
         wp_enqueue_style('category', get_template_directory_uri() . '/assets/css/category.css');
         wp_enqueue_style('archive', get_template_directory_uri() . '/assets/css/archive.css');
+        wp_enqueue_style('button', get_template_directory_uri() . '/assets/css/button.css');
     }
     if (is_archive()) {
         wp_enqueue_style('front', get_template_directory_uri() . '/assets/css/front.css');
@@ -27,7 +28,7 @@ function enqueue_custom_stylesheets() {
         wp_enqueue_style('front', get_template_directory_uri() . '/assets/css/front.css');
         wp_enqueue_style('pagenation', get_template_directory_uri() . '/assets/css/pagenation.css');
         wp_enqueue_style('archive', get_template_directory_uri() . '/assets/css/archive.css');
-                wp_enqueue_style('archive', get_template_directory_uri() . '/assets/css/search.css');
+        wp_enqueue_style('archive', get_template_directory_uri() . '/assets/css/search.css');
     }
 
     elseif (is_home()) {
@@ -35,6 +36,7 @@ function enqueue_custom_stylesheets() {
         wp_enqueue_style('search', get_template_directory_uri() . '/assets/css/search.css');
         wp_enqueue_style('pagenation', get_template_directory_uri() . '/assets/css/pagenation.css');
         wp_enqueue_style('tag', get_template_directory_uri() . '/assets/css/tag.css');
+        wp_enqueue_style('button', get_template_directory_uri() . '/assets/css/button.css');
     }
     // single.phpにのみ読み込むCSSファイル（例: 1, 2, 7〜10）
     elseif (is_single()) {

@@ -22,19 +22,19 @@
       <?php if (have_posts()) : ?>
         <div class="post-list">
           <?php while (have_posts()) : the_post(); ?>
-            <article class="post-item">
-              <a href="<?php the_permalink(); ?>">
-                <div class="article-content">
-                  <h2 class="post-title"><?php the_title(); ?></h2>
-                  <p class="post-excerpt"><?php echo wp_trim_words(get_the_excerpt(), 20, '...'); ?></p>
+          <article class="post-item">
+            <a href="<?php the_permalink(); ?>">
+              <?php if (has_post_thumbnail()) : ?>
+                <div class="post-thumbnail">
+                  <?php the_post_thumbnail('medium'); ?>
                 </div>
-                <?php if (has_post_thumbnail()) : ?>
-                  <div class="post-thumbnail">
-                    <?php the_post_thumbnail('medium'); ?>
-                  </div>
-                <?php endif; ?>
-              </a>
-            </article>
+              <?php else: ?>
+                <div class="thumb no-image">No Image</div>
+              <?php endif; ?>
+              <h2 class="post-title"><?php the_title(); ?></h2>
+              <p class="post-excerpt"><?php echo wp_trim_words(get_the_excerpt(), 20, '...'); ?></p>
+            </a>
+          </article>
           <?php endwhile; ?>
         </div>
 
