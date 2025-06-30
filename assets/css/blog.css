@@ -100,7 +100,11 @@ h1 {
   width: 1080px;
   margin: 0 auto;
 }
-
+@media (max-width: 480px) {
+  #category {
+    width: 100%;
+  }
+}
 /* カテゴリーツリー */
 .category-tree ul {
     list-style-type: none;

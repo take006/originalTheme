@@ -43,7 +43,7 @@
           $categories = get_the_category();
           if ( $categories ) {
               echo '<div class="post-tags">'; // タグと同じクラスを使用
-              echo '<span>カテゴリー:</span>';
+              echo '<span>カテゴリー：</span>';
               foreach ( $categories as $category ) {
                   echo '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" 
                             class="tag-button">' . esc_html( $category->name ) . '</a>';
@@ -53,7 +53,7 @@
         ?>
         </div>
         <div class="post-tags">
-          <span>タグ:</span>
+          <span>タグ：</span>
           <?php
             $post_tags = get_the_tags();
             if ($post_tags) {
