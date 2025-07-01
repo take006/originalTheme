@@ -1,6 +1,6 @@
 header {
-  background-color: var(--base-white);
-  border-bottom: 1px solid var(--border-gray);
+  background: #68d3e8;
+  background: linear-gradient(90deg, rgba(104, 211, 232, 1) 0%, rgba(58, 207, 182, 1) 50%, rgba(188, 255, 112, 1) 100%);
   height: 60px;
   width: 100%;
   color: var(--base-black);
@@ -16,11 +16,16 @@ header ul {
   gap: 20px;
 }
 
+
+
 .header a {
   margin: 0 15px;
   font-size: 16px;
+  font-weight: bold;
   text-decoration: none;
-  color: var(--font-light-gray);
+  color: var(--base-black);
+  -webkit-text-fill-color:var(--base-black);
+  -webkit-text-stroke:.2px var(--base-white);
 }
 
 
