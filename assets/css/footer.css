@@ -49,6 +49,7 @@
 
 .footer-title {
   margin-bottom: 2rem;
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {

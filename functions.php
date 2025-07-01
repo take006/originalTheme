@@ -61,11 +61,6 @@ function enqueue_custom_stylesheets() {
     ) {
         wp_enqueue_style('page', get_template_directory_uri() . '/assets/css/page.css');
     }
-    elseif (
-        is_page_template('page-privacy-policy.php') 
-    ) {
-        wp_enqueue_style('privacy', get_template_directory_uri() . '/assets/css/privacy.css');
-    }
     elseif (is_tax('series')) {
     wp_enqueue_style('series', get_template_directory_uri() . '/assets/css/series.css');
 }
@@ -267,5 +262,5 @@ function strict_category_only( $query ) {
 }
 add_action( 'pre_get_posts', 'strict_category_only' );
 
-
+add_filter( 'show_admin_bar', '__return_false' );
 ?>
