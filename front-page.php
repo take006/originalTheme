@@ -58,7 +58,7 @@ get_header();
     ?>
 
     <section id="article">
-      <h2>新着記事</h2>
+      <h2>NEW</h2>
       <div class="articles-wrapper">
         <?php 
         if ($the_query->have_posts()) :
