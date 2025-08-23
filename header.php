@@ -8,7 +8,10 @@
 </head>
 <body>
   <header class="header">
-    <a href="<?php echo home_url(); ?>">Top</a>
-    <a href="<?php echo home_url('/blog'); ?>">Blog(category)</a>
-    <a href="<?php echo home_url('/form'); ?>">contact form</a>
+    <span class="header-title"><a href="<?php echo home_url(); ?>">TechNote</a></span>
+    <ul>
+      <li><a href="<?php echo home_url(); ?>">Top</a></li>
+      <li><a href="<?php echo home_url('/blog'); ?>">カテゴリー</a></li>
+      <li><a href="<?php echo home_url('/form'); ?>">contact form</a></li>
+    </ul>
   </header>
