@@ -67,11 +67,6 @@ get_header();
         ?>
         <article class="article-item">
           <a href="<?php the_permalink(); ?>">
-            <?php if ( has_post_thumbnail() ) : ?>
-                <div class="thumb"><?php the_post_thumbnail('thumbnail'); ?></div>
-            <?php else: ?>
-                <div class="thumb no-image">No Image</div>
-            <?php endif; ?>
             <div class="text-wrapper">
               <h3><?php the_title(); ?></h3>
               <div>
