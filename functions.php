@@ -37,6 +37,7 @@ function enqueue_custom_stylesheets() {
         wp_enqueue_style('pagenation', get_template_directory_uri() . '/assets/css/pagenation.css');
         wp_enqueue_style('tag', get_template_directory_uri() . '/assets/css/tag.css');
         wp_enqueue_style('button', get_template_directory_uri() . '/assets/css/button.css');
+        wp_enqueue_style('home', get_template_directory_uri() . '/assets/css/home.css');
     }
     // single.phpにのみ読み込むCSSファイル（例: 1, 2, 7〜10）
     elseif (is_single()) {
